@@ -9,7 +9,7 @@ var sourcemaps = require('gulp-sourcemaps');
  
  
 gulp.task('sass', function () {
-  gulp.src('.sass/**/*.scss')
+  gulp.src('sass/**/*.scss')
   	.pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -17,12 +17,12 @@ gulp.task('sass', function () {
             cascade: false
         }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('.css'));
+    .pipe(gulp.dest('css'));
 
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch('.sass/**/*.scss', ['sass']);
+  gulp.watch('sass/**/*.scss', ['sass']);
 });
 
 
