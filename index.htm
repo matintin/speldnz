@@ -18,15 +18,28 @@
 <body>
 	<div id="overlay" class="hidden">checklist</div>
 	<header>
-		<div class="logo"><img src="" alt="logo"></div>
-		<div class="menu"><i class="fa fa-bars"></i><i class="fa fa-search"></i></div>
-		<div class="search"></div>
-		<nav id="mobile-nav" class="">
-			<ul>
+		<div class="header-wrap">
+			<div class="logo">
+				<a href="index.htm"><img src="asset/icons/logo-yellow1.png" alt="logo"></a>
+			</div>
+			<div class="empty"></div>
+			<div class="menu mobile-button">
+				<img src="asset/icons/menu-1.png" alt="menu-bar">
+			</div>
+			<div class="close mobile-button hidden">
+				<img src="asset/icons/close.png" alt="menu-bar">
+			</div>
+			<div class="search mobile-button">
+				<img src="asset/icons/search-1.png" alt="search-bar">
+			</div>
+		</div>
+	</header>
+		<nav>
+			<ul id="mobile-nav" class="hidden">
 				<li><a href="">About</a></li>
 
-				<li><a href="">Learning</a>
-					<ul>
+				<li class="learning"><a href="">Learning<span></span></a>
+					<ul id="learning-sub-menu" class="hidden">
 						<li><a href="">Dyslexia</a></li>
 						<li><a href="">Dyspraxia</a></li>
 						<li><a href="">ADHD</a></li>
@@ -40,55 +53,64 @@
 				<li><a href="">Contact</a></li>
 			</ul>
 		</nav>
-	</header>
 	
-	<section>
-
-		<h1>main-photo</h1>
-		
-		<div class="main-photo">
-			<h3>SNZ love to help<br/>to drivers of success.</h3>
-			<a href="">Learn More</a>
-		</div>
-
-	</section>
-
-	<section>
-
-		<h1>learing disabilites</h1>
+	<main>
+		<div class="center">
+			<section>
 			
-		<div class="learning-box">Dyslexia</div>
-		<div class="learning-box">Dyspraxia</div>
-		<div class="learning-box">ADHD</div>
-		<div class="learning-box">Donate</div>
-
-	</section>
-
-	<section>
-
-		<h1>news& event,faq</h1>
-		<div class="news">
-			<h3>News & Event</h3>
-			<h2>RADIO NEW ZEALAND INTERVIEW WITH SPELD NZ</h2>
-			<p>In case you missed it, here’s a chance to listen to SPELD NZ’s recent interview on Radio New Zealand National. The “One In Five” programme focuses on the parliamentary inquiry into identification and support for pupils with dyslexia, dyspraxia and autism spectrum...</p>
-			<a href="">Read More</a>
+				<div class="main-photo">
+					<div class="photo-wrap">
+						<h1 class="hidden">Speldnz About us</h1>
+					
+						<div class="about-box">
+							<h3>SNZ love to help<br/>to drivers of success.</h3>
+							<div class="learn-more-wrap">
+								<a href="">Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</section>
+			
+			<section>
+			
+				<h1 class="hidden">learning disabilites</h1>
+					
+				<div class="learning-box"><span><a href="">Dyslexia</a></span></div>
+				<div class="learning-box"><span><a href="">Dyspraxia</a></span></div>
+				<div class="learning-box"><span><a href="">ADHD</a></span></div>
+				<div class="learning-box"><span><a href="">Donate</a></span></div>
+			
+			</section>
+			
+			<section>
+			
+				<h1>news& event,faq</h1>
+				<div class="news">
+					<h3>News & Event</h3>
+					<h2>RADIO NEW ZEALAND INTERVIEW WITH SPELD NZ</h2>
+					<p>In case you missed it, here’s a chance to listen to SPELD NZ’s recent interview on Radio New Zealand National. The “One In Five” programme focuses on the parliamentary inquiry into identification and support for pupils with dyslexia, dyspraxia and autism spectrum...</p>
+					<a href="">Read More</a>
+				</div>
+			
+				<div class="faq">
+					<div class="faq-warp">
+						<h3>FAQ</h3>
+						
+						
+					</div>
+				</div>
+			
+			</section>
+			
+			<section>
+			
+				<h1>newsletter, support</h1>
+			
+			</section>
 		</div>
-
-		<div class="faq">
-			<div class="faq-warp">
-				<h3>FAQ</h3>
-				
-				
-			</div>
-		</div>
-
-	</section>
-
-	<section>
-
-		<h1>newsletter, support</h1>
-
-	</section>
+	</main>
 
 
 	<div id="go-top"></div>

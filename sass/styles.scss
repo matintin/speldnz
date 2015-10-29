@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'dyslexia';
+  src: url('../asset/font/open_dyslexic/OpenDyslexicAlta-Regular.otf');
+   font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	background-color:#FBFAF2;
+}
+
+header {
+	height:4.5em;
+	.header-wrap {
+		padding-top:1em;
+		display:flex;
+		flex-wrap:wrap;
+		@media only (min-width:500px) and (max-width : 44em) {
+			width:95%;
+			margin:0 auto;
+		}
+		// justify-content:space-around;
+		
+
+		.logo {
+			flex:0 0 5em;
+			margin-left:1em;
+		}
+		.empty {
+			flex:1 0 1em;
+		}
+		.mobile-button {
+			flex:0 0 1.5em;
+			height:1.5em;
+			margin-left:.7em;
+			padding:.5em;
+			border:.15em #888 solid;
+			border-radius:100%;
+			cursor:hand;
+			cursor:pointer;
+		}
+		.search {
+			margin-right:1em;
+		}
+		img { 
+			width:100%;
+		}
+	}//header-wrap
+
+}//header
+
+#mobile-nav {
+
+	margin:0;
+	padding:0;
+	display:flex;
+	flex-direction:column;
+	transition:all ease 1s;
+	width:100%;
+	
+
+	li {
+			list-style-type: none;
+		flex:0 0 4em;
+		line-height:4em;
+		// border-bottom:.1em #ddd solid;
+
+		&:nth-child(2){
+
+			#learning-sub-menu {
+				display:flex;
+				flex-direction:column;
+				padding:0;
+				li {
+					flex:0 0 2em;
+					border:1px red solid;
+					line-height:2em;
+					a {
+						font-size:.8em;
+						padding-left:4em;
+					}
+				}
+			}
+		}
+	
+		a {
+			text-decoration:none;
+			color:#000;
+			font-size:1em;
+			font-weight:200;
+			display:block;
+			padding-left:2em;
+			span {
+				margin-left:.5em;
+				background-image:url(../asset/icons/plus.png);
+				background-size:100%;
+				display:inline-block;
+				width:.8em;
+				height:.8em;
+				line-height:10em;
+			}
+		}
+	}
+	
+		
+}
+
+main {
+	.center{
+		width:400px;
+		margin:0 auto;
+		@media only (min-width:500px) and (max-width : 43.99em) {
+			width:95%;
+		}
+		@media only screen and (min-width : 44em) {
+			width:100%;
+		}
+		& section:nth-child(1) {
+			width:auto;
+			// height:100vh;
+
+			.main-photo {
+				position:relative;
+				z-index:5;
+				height:15em;
+				// padding-bottom:55%;
+				background-image:url(../asset/photos/section1.jpg);
+				// background-attach:cover;
+				background-position:center;
+				background-size:100%;
+				background-repeat:no-repeat;
+				background-attachment: cover;
+				@media only screen and (min-width : 450px) {
+					width:100%;
+					margin:0 auto;
+				}
+				@media only screen and (min-width : 44em) {
+					height:20em;
+					width:auto;
+					margin:0;
+				}
+				@media only screen and (min-width : 64em) {
+					display:none;	
+				}
+				.photo-wrap {
+					width:100%;
+					height:15em;
+					position:relative;
+					z-index:20;
+					background: linear-gradient(180deg, rgba(0,0,0,.5), rgba(255,255,255,.5));
+					@media only screen and (min-width : 450px) {
+					width:100%;
+					margin:0 auto;
+					}
+					@media only screen and (min-width : 44em) {
+						height:20em;
+						width:auto;
+						margin:0;
+					}
+
+					.about-box {
+						width:100%;
+						height:auto;
+						position:absolute;
+						top:1em;
+						left:1em;					
+						h3 {
+							text-align:center;
+							color:#fff;
+							font-weight:600;
+							font-family:dyslexia;
+							font-size:1.5em;
+							line-height:1.2em;
+							
+						}
+						.learn-more-wrap{
+							width:100%;
+							display:flex;
+							align-items:center;
+							margin-top:5em;
+							a {
+								
+								margin:0 auto;
+								text-decoration:none;
+								padding:.5em 1em;
+								border:.1em #FFAF02 solid;
+								border-radius:.5em;
+								font-size:.7em;
+								color:#fff;
+								background-color:#FFAF02;
+
+							}
+						}
+					}//about-box
+				}
+
+			}
+		}//section(1)
+
+		& section:nth-child(2) {
+			width:auto;
+			.learning-box {
+				height:7em;
+				
+				text-align:center;
+				line-height:7em;
+				span {
+					font-size:2em;
+					display:block;
+					font-family:helvetica;
+					font-weight:200;
+
+					a {
+						display:block;
+						text-decoration:none;
+						color:#fff;
+					}
+				}
+			}//learning-box
+		
+			& :nth-child(2) span {
+				background-color:#7a9eaf;
+			}
+			& :nth-child(3) span {
+				background-color:#de88a5;
+			}
+			& :nth-child(4) span {
+				background-color:#655989;
+			}
+			& :nth-child(5) span {
+				background-color:#3b6daf;
+			}
+
+		}//section(2)
+
+	}//center
+}
