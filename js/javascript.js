@@ -1,33 +1,61 @@
 $(function(){
 	// console.log('hi');
+	var isOpen = false;
+
 	$('.menu').on("click", function() {
 
-		$('#mobile-nav').removeClass("hidden");
-		$('.menu').addClass('hidden');
-		$('.close').removeClass('hidden');
+		if(isOpen == false) {
 
-	});
+			$('#mobile-nav').slideDown("slow");
+			$('.open').addClass('hidden');
+			$('.close').removeClass('hidden');
+			isOpen = true;
+		} else {
 
-	$('.close').on("click", function() {
+			$('#mobile-nav').slideUp("slow");
+			$('.close').addClass('hidden');
+			$('.open').removeClass('hidden');
 
-		$('#mobile-nav').addClass("hidden");
-		$('.close').addClass('hidden');
-		$('.menu').removeClass('hidden');
-
-	});
-
-	$('.learning').on("click",function(e) {
-
-		if($(this).on("click")){
-			$('.learning').css('flex','0 0 15em')
+			if(isLearningOpen=true) {
+				$('#learning-sub-menu').slideUp("slow");
+			}
+			isOpen = false;
 		}
-			e.preventDefault();
 
-			$('#learning-sub-menu').removeClass("hidden");
-		if($('#learning-sub-menu').on("click")) {
-			$(this).unbind();
-		} 
+	});
+
+	var isLearningOpen = false;
+
+
+	$('.learning span').on("click",function() {
+
+		//$('#mobile-nav').css('height','426px');
+		if(isLearningOpen==false) {
+
+			$('#learning-sub-menu').slideDown("slow");
+
+			isLearningOpen=true;
+
+		} else {
+			
+			$('#learning-sub-menu').slideUp("slow");
+			isLearningOpen=false;
+		}	
 		
+	});
+	var isSearchOpen = false;
+	$('.search').on("click",function() {
+		if(isSearchOpen == false) {
+
+			$('#search-box').slideDown();
+			isSearchOpen = true;
+
+		} else {
+			$('#search-box').slideUp(function() {
+				$('#search-box').css("display","none");
+			});
+			isSearchOpen = false;
+		}
 	});
 
 
