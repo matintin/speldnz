@@ -18,6 +18,7 @@ $(function(){
 
 			if(isLearningOpen=true) {
 				$('#learning-sub-menu').slideUp("slow");
+				$(".plus").attr("src","asset/icons/plus.png");
 			}
 			isOpen = false;
 		}
@@ -30,7 +31,10 @@ $(function(){
 	$('.learning span').on("click",function() {
 
 		//$('#mobile-nav').css('height','426px');
+
 		if(isLearningOpen==false) {
+
+			$(".plus").attr("src","asset/icons/minus.png");
 
 			$('#learning-sub-menu').slideDown("slow");
 
@@ -38,6 +42,7 @@ $(function(){
 
 		} else {
 			
+			$(".plus").attr("src","asset/icons/plus.png");
 			$('#learning-sub-menu').slideUp("slow");
 			isLearningOpen=false;
 		}	
