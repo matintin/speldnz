@@ -63,6 +63,18 @@ $(function(){
 		}
 	});
 
+//------------------image-slider----------------------------------
 
+//------------------image-slider----------------------------------
 	
+});
+
+$(document).ready(function(){
+  $('.image-slider').slick({
+      slidesToShow: 2,
+	  slidesToScroll: 1,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
+  });
+  console.log("hi");
 });
